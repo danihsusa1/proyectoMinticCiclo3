@@ -1,0 +1,218 @@
+body {
+    height: 100vh;
+    margin: 0%;
+    padding: 0%;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-image: linear-gradient(rgba(4, 74, 78, 0.6), rgba(107, 222, 239, 0.6)),url("../images/marcelo-leal-k7ll1hpdhFA-unsplash.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;   
+    text-decoration: none;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: 300px auto;
+	
+}
+
+.column2 {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content:  center;
+	
+	
+}
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background: #042331;
+    transition: all .5s ease;
+}
+
+.sidebar header {
+    font-size: 30px;
+    color: bisque;
+    text-align: center;
+    line-height: 70px;
+    background: #063146;
+    user-select: none;
+}
+
+.logout{
+	margin: 0;
+  	position: absolute;
+  	left: 50%;
+  	bottom: 6%;
+  	-ms-transform: translate(-50%, -50%);
+  	transform: translate(-50%, -50%);
+  	padding: 10px 5px 10px 5px;
+  	background-color: #F08080;
+	color: #660000;
+	border: 1px solid #F67280;
+	border-radius: 7px;
+}
+
+.sidebar ul a {
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 65px;
+    font-size: 22px;
+    color: rgb(238, 238, 238);
+    padding-left: 40px;
+    box-sizing: border-box;
+    border-top: 1px solid rgba(255, 255, 255, .1);
+    border-bottom: 1px solid rgb(46, 43, 39);
+    transition: .4s;
+}
+
+ul li:hover a{
+    padding-left: 50px;
+}
+
+.sidebar ul a i{
+    margin-right: 16px;
+}
+
+#check {
+    display: none;
+
+}
+
+label #btn, label #cancel{
+    position: absolute;
+    cursor: pointer;
+    background: #042331;
+    border-radius: 5px;
+}
+
+label #btn {
+    left: 40px;
+    top: 25px;
+    font-size: 35px;
+    color: rgb(238, 238, 238);
+    padding: 6px 12px;
+    transition: all .5s;
+}
+
+label #cancel {
+    z-index: 1111;
+    left: -195px;
+    top: 17px;
+    font-size: 30px;
+    color: rgb(238, 238, 238);
+    padding: 4px 9px;
+    transition: all .5s ease;
+}
+
+
+
+.fa {
+	
+	padding-left: 25px;
+	
+}
+
+
+
+.hide-menu{
+	display: none;
+} 
+
+li:hover > .hide-menu {
+	display: initial;
+} 
+
+.sub-menu{
+	
+	margin: 0px;
+	padding: 0px 0px 0px 10px;
+	background-color:  rgba(107, 222, 239, 0.6);
+	
+}
+
+.sub-menu-est {
+	
+	background-color:  rgba(107, 222, 239, 0.6);
+}
+
+
+.sidebar .main-menu li ul li a{
+	font-size: 15px;
+	
+}
+
+
+
+.selected {
+	background-color: #009879;
+}
+
+.selected a {
+	font-weight: bold;
+}
+
+.form-group {
+	display: flex;
+	flex-direction: column;
+	width: 400px;	
+}
+
+.titulo {
+	color: bisque;
+	padding-bottom: 30px;
+	
+}
+
+.sangre-tipo {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+.btn {
+	margin-top: 15px;
+	padding: 10px 7px 10px 7px;
+	width: 30%;
+	align-self: center;
+	color: white;
+	background-color: #2E8B57;
+	border-style: none;
+	border-radius: 7px;
+}
+
+input {
+	padding: 8px;
+	
+}
+
+label {
+	font-size:20px;
+	font-weight: bold;
+	color:  bisque;
+	
+}
+
+.alert-info{
+	background-color: #77DD77;
+	color: #046307;
+	padding: 6px;
+	border: 1px solid #59E817;
+	border-radius: 7px;
+}
+
+.welcome {
+	font-size: 120px;
+	color: bisque;
+}

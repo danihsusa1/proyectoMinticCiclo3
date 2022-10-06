@@ -1,0 +1,77 @@
+<!DOCTYPE html >
+<html xmlns:th="http//www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- CSS only -->
+        <link rel="stylesheet" href="../static/css/style.css">
+
+        <title>Login</title>
+    </head>
+    <body>
+
+       
+	<div class="main_iniciar">
+	
+		<div>
+            <a href="home(Daniel).html">
+            <img class="logo" src="../static/images/logo.png" alt="logo" width="180px" height="72px">
+            </a>    
+    	</div> 
+    
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3">
+				<div class="titulo-div"><h1 class="titulo">Inicio de sesión</h1></div>
+				<form th:action="@{/login}" method="post">
+
+					<div th:if=${param.error}>
+						<div class="alert-danger">Usuario o contraseña
+							inválidos</div>
+					</div>
+
+					<div th:if=${param.logout}>
+						<div class="alert-info">Ha cerrado sesión exitosamente
+						</div>
+					</div>
+
+
+					<div class="form-group">
+						<label class="label"  for="username">Nombre de usuario : </label> 
+						<input id="username"  name="username" type="text" class="form-control"
+							required autofocus="autofocus" pattern="[a-z0-9._%+-]{4,}"
+                                                        title="Debe contener al menos 4 caracteres y no debe incluir espacios o 
+                                                        caracteres en mayuscula" 
+                                                        autocomplete="off"
+                                                        placeholder="Digite su username en minuscula">
+					</div>
+
+					<div class="form-group">
+						<label class="label"  for="password">Password : </label> <input
+							id="password" type="password"  name="password" class="form-control" required
+							autofocus="autofocus" 
+                                                        autocomplete="off"
+                                                        placeholder="Digite su password">
+					</div>
+
+					<div class="form-group">
+						<div class="btn-container">
+							<div class="iniciar_sesion_btn">
+								<input type="submit" class="btn-primary" name="login-submit" id="login-submit"
+									value="Iniciar sesión" />
+							</div>
+						</div>
+					</div>
+				</form>
+				<div class="form-group">
+					<span>Si eres nuevo usuario <a th:href="@{/registroClinica}">regístrate
+							aqui</a></span>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+
+    </body>
+</html>
